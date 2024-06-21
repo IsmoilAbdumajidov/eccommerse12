@@ -11,3 +11,48 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin-right: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 50px;
+  margin-right: 2px;
+}
+
+.main-container {
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+@layer base {
+  .main-container {
+    @apply px-2 md:px-5 lg:px-10 xl:px-16
+  }
+
+  input, select {
+    @apply bg-transparent p-2 w-full border-2 border-e-0 border-blue-200 bg-gray-50 rounded-xl py-3 focus:outline-none placeholder:text-[#f2f4f7]
+  }
+}
+
+::placeholder {
+  color: gray !important;
+  font-size: 13px;
+}
+
+@media screen and (min-width:1480px) {
+  .main-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
