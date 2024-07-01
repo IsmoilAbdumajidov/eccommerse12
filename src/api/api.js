@@ -1,4 +1,6 @@
-export const baseUrl = 'https://dummyjson.com/products'
+export const baseUrl = 'https://dummyjson.com/products';
+
+
 
 export const GetProduct = async ({ dispatch, type = "def", value = "all" }) => {
     try {

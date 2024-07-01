@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react'
+import React, { createContext, useEffect, useReducer } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import Home from './pages/Home'
@@ -21,7 +21,14 @@ const initilValue = {
 const App = () => {
 
   const [state, dispatch] = useReducer(reducerFn, initilValue)
-  // console.log(state);
+
+  useEffect(() => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || []
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || []
+    dispatch({ type: "CART", payload: cart })
+    dispatch({ type: "WISHLIST", payload: wishlist })
+  }, [])
+
 
   return (
     <div>
