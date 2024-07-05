@@ -9,9 +9,9 @@ const Identfiy = ({ Id }) => {
     const isInCart = cart.find(elem => elem.id === Id)
     const isInWishlist = wishlist.find(elem => elem.id === Id)
     return (
-        <div className='flex gap-2'>
-            {isInCart && <HiShoppingCart className='w-5 h-5 text-green-500' />}
-            {isInWishlist && <IoMdHeart className='w-5 h-5 text-red-500' />}
+        <div className='flex gap-2 '>
+            {isInCart && <HiShoppingCart className='w-6 h-6 text-green-500' />}
+            {isInWishlist && <IoMdHeart className='w-6 h-6 text-red-500' />}
         </div>
     )
 }

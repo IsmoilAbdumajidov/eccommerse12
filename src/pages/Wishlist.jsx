@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import ProductsMap from '../components/ProductsMap'
+import { StoreContext } from '../App'
 
 const Wishlist = () => {
+  const [{ wishlist }, _] = useContext(StoreContext)
   return (
-    <div>Wishlist</div>
+    <ProductsMap products={wishlist} type="wishlist" />
   )
 }
 

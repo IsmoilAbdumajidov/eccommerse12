@@ -53,8 +53,8 @@ const App = () => {
         <FixedNav />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/' element={<Cart />} />
-          <Route path='/' element={<Wishlist />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/wishlist' element={<Wishlist />} />
           <Route path='*' element={<Nomatch />} />
         </Routes>
       </StoreContext.Provider>
